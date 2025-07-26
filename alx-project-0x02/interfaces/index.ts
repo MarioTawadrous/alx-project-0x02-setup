@@ -1,0 +1,3 @@
+interface random {
+  someProp: string
+}
