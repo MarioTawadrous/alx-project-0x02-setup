@@ -18,3 +18,10 @@ export interface ButtonProps {
   shape?: 'rounded-sm' | 'rounded-md' | 'rounded-full';
   className?: string;
 }
+
+export interface PostProps {
+  id: number;
+  title: string;
+  body: string;
+  userId: number;
+}
