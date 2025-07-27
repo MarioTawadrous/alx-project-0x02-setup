@@ -1,8 +1,8 @@
 // pages/posts.tsx
-import React from "react";
-import Header from "../components/layout/Header";
-import PostCard from "../components/common/PostCard";
-import { type PostProps } from "../interfaces";
+
+import Header from "@/components/layout/Header";
+import PostCard from "@/components/common/PostCard";
+import { type PostProps } from "@/interfaces";
 
 interface PostsPageProps {
   posts: PostProps[];

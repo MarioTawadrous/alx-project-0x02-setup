@@ -1,8 +1,7 @@
 // pages/users.tsx
-import React from "react";
-import Header from "../components/layout/Header";
-import UserCard from "../components/common/UserCard";
-import { type UserProps } from "../interfaces";
+import Header from "@/components/layout/Header";
+import UserCard from "@/components/common/UserCard";
+import { type UserProps } from "@/interfaces";
 
 interface UsersPageProps {
   users: UserProps[];
