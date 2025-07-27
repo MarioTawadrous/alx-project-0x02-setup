@@ -1,14 +1,14 @@
 // pages/users.tsx
-import Header from "@/components/layout/Header";
-import UserCard from "@/components/common/UserCard";
-import { type UserProps } from "@/interfaces";
+import React from "react";
+import Header from "../components/layout/Header";
+import UserCard from "../components/common/UserCard";
+import { type UserProps } from "../interfaces";
 
 interface UsersPageProps {
   users: UserProps[];
   error?: string;
 }
 
-// Define interface for API response data
 interface ApiUser {
   id: number;
   name: string;
@@ -52,7 +52,8 @@ const Users: React.FC<UsersPageProps> = ({ users, error }) => {
   );
 };
 
-export const getStaticProps = async () => {
+// Update to use function declaration with parentheses
+export async function getStaticProps() {
   try {
     const response = await fetch("https://jsonplaceholder.typicode.com/users");
 
@@ -62,7 +63,6 @@ export const getStaticProps = async () => {
 
     const data: ApiUser[] = await response.json();
 
-    // Map API data to match UserProps interface
     const users: UserProps[] = data.map((user) => ({
       id: user.id,
       name: user.name,
@@ -92,6 +92,6 @@ export const getStaticProps = async () => {
       revalidate: 60,
     };
   }
-};
+}
 
 export default Users;
