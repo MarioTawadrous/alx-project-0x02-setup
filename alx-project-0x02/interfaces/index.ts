@@ -1,3 +1,4 @@
-interface random {
-  someProp: string
+export interface CardProps {
+  title: string;
+  content: string;
 }
