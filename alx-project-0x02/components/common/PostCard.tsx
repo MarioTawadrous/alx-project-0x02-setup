@@ -1,7 +1,7 @@
 // components/common/PostCard.tsx
 import { type PostProps } from "@/interfaces";
 
-const PostCard: React.FC<PostProps> = ({ id, title, body, userId }) => {
+const PostCard: React.FC<PostProps> = ({ id, title, content, userId }) => {
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100">
       <div className="p-6">
@@ -12,7 +12,7 @@ const PostCard: React.FC<PostProps> = ({ id, title, body, userId }) => {
           </span>
         </div>
 
-        <p className="text-gray-600 mb-6">{body}</p>
+        <p className="text-gray-600 mb-6">{content}</p>
 
         <div className="flex justify-between items-center">
           <div className="flex items-center">
